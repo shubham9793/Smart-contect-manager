@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" 
+	th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<body>
+    <section>
+    	
+    	<div class="container">
+    		<div class="card">
+    			<div class="card-body my-5">
+    				<div class="container text-center">
+    					<img src="" style="height: 200px; width: 200px;"
+						class="my_profile_pic" th:src="@{'/img/valu.png'}"
+						alt="Profile photo " />
+    				</div>
+    				<h1 class="text-center mt-3 text-secondary" style="font-style: italic">
+    					Start Adding your contact on cloud! 
+    				</h1>
+    				
+    				<a th:href="@{/user/add-contact}" class =" mt-5 btn btn-primary btn-block w-100 text-uppercase"> Add New Contact</a>
+    				
+    			</div>
+    		</div>
+    	</div>
+    </section>
+</body>
+</html>

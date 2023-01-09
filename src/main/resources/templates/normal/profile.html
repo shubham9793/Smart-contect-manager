@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" 
+	th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<body>
+    <section>
+    	
+    	<div class="container">
+    		<div class="card">
+    			<div class="card-body">
+    				<div class="container text-center">
+    					<img src="" style="height: 200px; width: 200px;"
+						class="my_profile_pic" th:src="@{'/img/'+${user.imageurl}}"
+						alt="Profile photo " />
+    				</div>
+    				<h1  style="margin-top: 2%" class="text-center" th:text="${user.name}" ></h1>
+    				<table class="table text-center" style="margin-top: 2%">
+						<thead>
+							<tr>
+								<th scope="col">#USERID</th>
+								<th scope="col">SCM2K22<span th:text="${user.Id}"></span></th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Email</th>
+								<td><span th:text="${user.email}" ></span></td>
+								
+							</tr>
+							<tr>
+								<th scope="row">Role</th>
+								<td><span th:text="${user.role}" ></span></td>
+								
+							</tr>
+							<tr>
+								<th scope="row">Enabled</th>
+								<td><span th:text="${user.enabled}" ></span></td>
+								
+							</tr>
+							
+							<tr>
+								<th scope="row">About You</th>
+								<td><span th:text="${user.about}" ></span></td>
+								
+							</tr>
+						</tbody>
+					</table>
+    			</div>
+    		</div> 
+    	</div>
+    </section>
+</body>
+</html>
